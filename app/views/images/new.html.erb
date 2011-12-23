@@ -1,0 +1,9 @@
+<%= semantic_form_for @image, :html => {:multipart => true} do |f|%>
+	<div class="image">
+		<%= f.inputs "Image" do%>
+			<%= f.input :title %>
+			<%= f.input :file, :as => :file%>
+		<%= f.buttons%>
+		<% end -%>
+	</div>
+<% end -%>

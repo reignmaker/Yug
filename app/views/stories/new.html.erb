@@ -1,0 +1,22 @@
+<div id="edit">
+	<%= semantic_form_for @story do |f|%>
+	<%f.object.build_subject #unless f.object.new_record?%>
+	<%= f.inputs  "New story" do %>
+	<%= f.input :subject_title, :as => :autocomplete, :url => autocomplete_subject_title_subjects_path %>
+	<%= f.input :title %>
+	<%= f.input :teaser %>
+	<%= f.inputs "Images" do %>
+		<% if f.object.new_record? %>
+		<div id="images">
+
+		</div>
+		<% end -%>
+	<% end -%>
+	<%= f.input :content %>
+	<%= f.input :status, :as => :radio, :collection => Story.status_collection%>
+	<%= f.input :published_at %>
+
+	<% end -%>
+	<%= f.buttons%>
+	<% end -%>
+</div>

@@ -1,0 +1,6 @@
+<div id="images">
+	<%= image_tag @image.file.url(:thumb) %>
+	<p><%= @image.title %></p>
+	<p>Thumb: <%= @image.file.url(:thumb)%></p>
+	<p>Full: <%= @image.file.url%></p>
+</div>
