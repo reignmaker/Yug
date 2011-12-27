@@ -7,9 +7,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 [
-	{ :title => "Митинг 10 декабря в Москве"},
-	{ :title => "Выборы президента Южной Осетии"},
-	{ :title => "Протесты и волнения после выборов в Госдуму"},
-	{ :title => "Президентские выборы 2012"}].each do |s|
-	Subject.find_or_create_by_title(s)
+  { :title => "Митинг 10 декабря в Москве"},
+  { :title => "Выборы президента Южной Осетии"},
+  { :title => "Протесты и волнения после выборов в Госдуму"},
+  { :title => "Президентские выборы 2012"}].each do |s|
+  Subject.find_or_create_by_title(s)
 end

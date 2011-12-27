@@ -1,12 +1,12 @@
 <div id="stories">
-	<% @stories.each do |s|%>
-	<h4><%= link_to s.subject_title, s.subject%></h4>
-	<em><b><%=s.subject.published_stories_count%></b> <%= Russian::p(s.subject.stories_count, "новость","новости","новостей")%></em>
-	<div class="story">
-		<h3><%= link_to s.title, s %></h3>
-		<span><%= Russian::strftime(s.published_at, :long)%></span>
-		<p><%= s.teaser %></p>
-	</div>
-	<hr>
-	<% end -%>
+  <% @stories.each do |s|%>
+  <h4><%= link_to s.subject_title, s.subject%></h4>
+  <em><b><%=s.subject.published_stories_count%></b> <%= Russian::p(s.subject.stories_count, "новость","новости","новостей")%></em>
+  <div class="story">
+    <h3><%= link_to s.title, s %></h3>
+    <span><%= Russian::strftime(s.published_at, :long)%></span>
+    <p><%= s.teaser %></p>
+  </div>
+  <hr>
+  <% end -%>
 </div>

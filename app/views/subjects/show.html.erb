@@ -1,9 +1,9 @@
 <div class="subject">
-	<h3><%= @subject.title %></h3>
-	<% @subject.stories.each do |s|%>
-		<h4><%= link_to s.title, s%></h4>
-		<p><%=s.teaser%></p>
-		<p><%=s.content%></p>
-	<% end -%>
+  <h3><%= @subject.title %></h3>
+  <% @subject.stories.each do |s|%>
+    <h4><%= link_to s.title, s%></h4>
+    <p><%=s.teaser%></p>
+    <p><%=s.content%></p>
+  <% end -%>
 
 </div>

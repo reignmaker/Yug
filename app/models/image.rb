@@ -1,12 +1,12 @@
 class Image < ActiveRecord::Base
-	include Rails.application.routes.url_helpers
-	belongs_to :story
-	mount_uploader :file, ImageUploader
-	
-	def to_jq_upload
+  include Rails.application.routes.url_helpers
+  belongs_to :story
+  mount_uploader :file, ImageUploader
+  
+  def to_jq_upload
   {
-  	"id" => id,
-  	"title" => title,
+    "id" => id,
+    "title" => title,
     "name" => read_attribute(:file),
     "size" => file.size,
     "url" => file.url,

@@ -2,19 +2,19 @@
 <input id="image_file" type="file" name="image[file]">
 <input type="submit">
 <%= semantic_form_for @image do |f|%>
-	<%= f.input :title%>
+  <%= f.input :title%>
 <% end -%>
 <script type="text/javascript">
-	jQuery(function(){
-			var file_input = $('input[type="file"]'), title_input = $('#image_title'), authenticity_token = $('input[name="authenticity_token"]').val();
+  jQuery(function(){
+      var file_input = $('input[type="file"]'), title_input = $('#image_title'), authenticity_token = $('input[name="authenticity_token"]').val();
 
-			file_input.ajaxfileupload({
+      file_input.ajaxfileupload({
       'action' : '/images',
       'params':{
       'image' : {
-      	'title' : title_input.val(),
-      	'authenticity_token' : authenticity_token
-      }	
+        'title' : title_input.val(),
+        'authenticity_token' : authenticity_token
+      } 
       },
       'onComplete': function(response) {
         console.log('custom handler for file:');
@@ -23,6 +23,6 @@
         file_input.val('');
         title_input.val('');
       }
-    	});
-	});
+      });
+  });
 </script>

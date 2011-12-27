@@ -1,16 +1,16 @@
 <div id="subjects">
-	<% @subjects.each do |subject| %>
-	<div class="subject">
-		<span><%= link_to subject.title, subject %></span>
-		<% if subject.description %>
-		<p class="description"><%= subject.description %></p>
-		<% end -%>
-		<% subject.last_three_story.each do |story|%>
-		<div class="stories <%= dom_id(story)%>">
-			<h3><%= link_to story.title, story%></h3>
-			<span>Просмотров: <%=story.impressionist_count%></span>
-		</div>
-		<% end -%>
-	</div>
-	<% end -%>
+  <% @subjects.each do |subject| %>
+  <div class="subject">
+    <span><%= link_to subject.title, subject %></span>
+    <% if subject.description %>
+    <p class="description"><%= subject.description %></p>
+    <% end -%>
+    <% subject.last_three_story.each do |story|%>
+    <div class="stories <%= dom_id(story)%>">
+      <h3><%= link_to story.title, story%></h3>
+      <span>Просмотров: <%=story.impressionist_count%></span>
+    </div>
+    <% end -%>
+  </div>
+  <% end -%>
 </div>
