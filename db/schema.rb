@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111222190120) do
+ActiveRecord::Schema.define(:version => 20111224155743) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -89,14 +89,16 @@ ActiveRecord::Schema.define(:version => 20111222190120) do
 
   create_table "stories", :force => true do |t|
     t.string   "title"
-    t.text     "teaser",       :limit => 400
+    t.text     "teaser",            :limit => 400
     t.text     "content"
-    t.string   "status",       :limit => 20,  :default => "moderating"
+    t.string   "status",            :limit => 20,  :default => "moderating"
     t.integer  "user_id"
     t.integer  "subject_id"
-    t.datetime "published_at",                :default => '2011-12-22 14:56:00'
+    t.datetime "published_at",                     :default => '2011-12-25 11:46:36'
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_main",                          :default => false
+    t.integer  "impressions_count"
   end
 
   create_table "subjects", :force => true do |t|

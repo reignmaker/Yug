@@ -1,5 +1,8 @@
 ActiveAdmin.register Story do
 scope :all, :default => true
+scope :main do |stories|
+	stories.where(:is_main => true)
+end
 scope :moderating do |stories|
 	stories.where(:status => Story::STATUS_MODERATING)
 end
@@ -50,15 +53,16 @@ end
   form do |f|
   	if f.object.new_record? then
   		f.object.build_subject
-  		f.inputs :subject_title
+  		f.inputs :subject_id
   	else
-  		f.inputs :subject_title
+  		f.inputs :subject_id
   	end
   	f.inputs do 
 	  	f.input :title
 	  	f.input :teaser
 	  	f.input :content
   		f.input :status, :collection => Story.status_collection, :as => :radio
+  		f.input :is_main, :as => :radio
   		f.input :published_at
   	end
   	f.buttons

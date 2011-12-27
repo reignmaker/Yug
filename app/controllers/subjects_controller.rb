@@ -3,13 +3,13 @@ class SubjectsController < ApplicationController
 	respond_to :html
 	
 	def index
-		@subjects = Subject.all
+		@subjects = Subject.find(:all)
 		
 	end
 
 	def show
 		@subject = Subject.find(params[:id])
-		
+		@stories = @subject.all_published
 	end
 
 	def new

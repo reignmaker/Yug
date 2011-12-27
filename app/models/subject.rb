@@ -8,16 +8,26 @@ class Subject < ActiveRecord::Base
 	friendly_id :transliterate_title, :use => :slugged
 
 	def last_three_story
-		stories.limit(3).order("updated_at DESC")		
+		stories.where(:status => Story::STATUS_PUBLISHED).limit(3).order("updated_at DESC")		
+	end
+
+	def all_published
+		stories.where(:status => Story::STATUS_PUBLISHED)
 	end
 
 	def transliterate_title
 		(Russian::transliterate title).parameterize
 		
 	end
+
 	def stories_count
 		stories.count
 	end
+
+	def published_stories_count
+		stories.where(:status => Story::STATUS_PUBLISHED).count
+	end
+
 	def new_title
 		title = Subject.new
 	end

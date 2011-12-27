@@ -8,7 +8,9 @@
 	<%= f.inputs "Images" do %>
 		<% if f.object.new_record? %>
 		<div id="images">
-
+			<input type="hidden" name="images[]" value="1">
+			<input type="hidden" name="images[]" value="2">
+			<input type="hidden" name="images[]" value="3">
 		</div>
 		<% end -%>
 	<% end -%>

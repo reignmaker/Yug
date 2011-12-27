@@ -6,6 +6,7 @@ class StoriesController < ApplicationController
 	
 	def index
 		@stories = Story.last_ten
+
 	end
 
 	def show
@@ -29,6 +30,7 @@ class StoriesController < ApplicationController
 		@story = Story.new(story)
 		@story.subject_id = subject.id
 		if @story.save
+			binding.pry
 			respond_with @story
 		else
 			render action: "new"

@@ -1,9 +1,28 @@
-<%= semantic_form_for @image, :html => {:multipart => true} do |f|%>
-	<div class="image">
-		<%= f.inputs "Image" do%>
-			<%= f.input :title %>
-			<%= f.input :file, :as => :file%>
-		<%= f.buttons%>
-		<% end -%>
-	</div>
+<input id="image_title" type="text" name="image[title]">
+<input id="image_file" type="file" name="image[file]">
+<input type="submit">
+<%= semantic_form_for @image do |f|%>
+	<%= f.input :title%>
 <% end -%>
+<script type="text/javascript">
+	jQuery(function(){
+			var file_input = $('input[type="file"]'), title_input = $('#image_title'), authenticity_token = $('input[name="authenticity_token"]').val();
+
+			file_input.ajaxfileupload({
+      'action' : '/images',
+      'params':{
+      'image' : {
+      	'title' : title_input.val(),
+      	'authenticity_token' : authenticity_token
+      }	
+      },
+      'onComplete': function(response) {
+        console.log('custom handler for file:');
+        json = response.slice(5,response.length).slice(0,response.length-11);
+        console.log(json);
+        file_input.val('');
+        title_input.val('');
+      }
+    	});
+	});
+</script>

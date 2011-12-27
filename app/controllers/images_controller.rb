@@ -3,10 +3,12 @@ class ImagesController < ApplicationController
 	
 	def index
 		@images = Image.all
+		render :json => @images.collect { |i| i.to_jq_upload }.to_json
 
 	end
 	def show
 		@image = Image.find(params[:id])
+		render :json => [@image.to_jq_upload].to_json
 	end
 	def new
 		@image = Image.new
@@ -16,9 +18,9 @@ class ImagesController < ApplicationController
 	def create
 		@image = Image.new(params[:image])
 		if @image.save
-			respond_with @image
+			render :json => [@image.to_jq_upload].to_json
 		else
-			render action 'new'
+			render :json => [{:error => "custom_failure"}], :status => 304
 		end
 	end
 

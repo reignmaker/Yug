@@ -4,7 +4,7 @@ Yug::Application.routes.draw do
   root :to => 'stories#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   resources :shows
-  resources :images
+  resources :images#, :only => [:index, :create, :destroy]
   resources :users
   resources :stories
   resources :subjects do

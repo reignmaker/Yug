@@ -6,7 +6,7 @@ class Story < ActiveRecord::Base
 	STATUS_APPROVED = 'approved'
 	STATUS_UNAPPROVED = 'unapproved'
 	
-	is_impressionable
+	is_impressionable :counter_cache => true
 
 	validates_presence_of :title, :content, :subject_id
 	has_many :images
@@ -21,7 +21,15 @@ class Story < ActiveRecord::Base
 	end
 
 	# ActiveAdmin helper methods
-	
+	def self.popular
+		where(:status => Story::STATUS_PUBLISHED)\
+		.where("published_at <=(?)",Time.now).order('impressions_count DESC').limit(10)
+	end
+
+	def self.main
+		where(:status => Story::STATUS_PUBLISHED)\
+		.where("published_at <=(?)",Time.now).where(:is_main => true)
+	end
 	def status_tag
 		case self.status
 			when STATUS_DELETED then :error
