@@ -1,9 +1,32 @@
-<div class="subject">
-  <h3><%= @subject.title %></h3>
-  <% @subject.stories.each do |s|%>
-    <h4><%= link_to s.title, s%></h4>
-    <p><%=s.teaser%></p>
-    <p><%=s.content%></p>
+<%= content_for(:title) {"Сюжет: " + @subject.title}%>
+<section class="suget">
+  <div>
+    <h1><%= @subject.title %></h1>
+    <p class="share_suget"><span>Поделиться: </span>
+        <a href="#"><img src=<%="#{root_url}assets/facebook.png" %> alt="" /></a>
+        <a href="#"><img src=<%= "#{root_url}assets/twitter.png" %> alt="" /></a>
+        <a href="#"><img src=<%= "#{root_url}assets/lj.png" %> alt="" /></a>
+        <a href="#"><img src=<%= "#{root_url}assets/vkontakte.png" %> alt="" /></a>
+        <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" /></a>
+        <img src=<%="#{root_url}assets/googlecount.png" %> alt="" />
+      </p>
+      <p class="sugetp"><%= @subject.description if true %></p>
+  </div>
+  <h2 class="newscounter"><%=@subject.published_stories_count%> <%= Russian::p(@subject.published_stories_count, "новость","новости","новостей")%></h2>
+  <% @stories.each do |s|%>
+    <div class="suget-block">
+        <p class="newsdate"><%= Russian::strftime(s.published_at, :long)%></p>
+        <a href="#"><%= link_to s.title, s%></a>
+        <div class="suget-content">
+          <p><%=s.teaser%></p>
+        </div>
+          <article class="newscounters">
+            <a href="#" class="newsprosmotrov"></a>
+            <p><%= s.impressionist_count%></p>
+            <a href="#" class="newsdiscuss"></a>
+            <p>34</p>           
+          </article>
+    </div>
   <% end -%>
-
-</div>
+</section>
+<%= render "shared/sidebar", :populars => @populars %>

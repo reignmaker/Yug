@@ -3,6 +3,8 @@
 <input type="submit">
 <%= semantic_form_for @image do |f|%>
   <%= f.input :title%>
+  <%= f.input :file, :as => :file%>
+  <%= f.buttons%>
 <% end -%>
 <script type="text/javascript">
   jQuery(function(){

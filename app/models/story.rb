@@ -14,22 +14,21 @@ class Story < ActiveRecord::Base
   belongs_to :subject
 
   delegate :title, :description, :to => :subject, :prefix => true
+
+# get all published stories  
+  scope :published, where(:status => Story::STATUS_PUBLISHED).where("published_at <=(?)",Time.now)
+
+# get last N stories  
+  scope :last_n, lambda {|n| published.limit(n)} 
+
+# get N popular stories 
+  scope :popular_n, lambda {|n|published.order('impressions_count DESC').limit(n)}
+ 
+# get main story
+  scope :main, published.where(:is_main => true)
+
+# ActiveAdmin helper methods
   
-  def self.last_ten
-    where(:status => Story::STATUS_PUBLISHED)\
-    .where("published_at <=(?)",Time.now).limit(10)
-  end
-
-  # ActiveAdmin helper methods
-  def self.popular
-    where(:status => Story::STATUS_PUBLISHED)\
-    .where("published_at <=(?)",Time.now).order('impressions_count DESC').limit(10)
-  end
-
-  def self.main
-    where(:status => Story::STATUS_PUBLISHED)\
-    .where("published_at <=(?)",Time.now).where(:is_main => true)
-  end
   def status_tag
     case self.status
       when STATUS_DELETED then :error

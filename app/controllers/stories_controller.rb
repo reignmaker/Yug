@@ -5,13 +5,15 @@ class StoriesController < ApplicationController
   respond_to :html, :json
   
   def index
-    @stories = Story.last_ten
-
+    @stories = Story.last_n(10)
+    @populars = Story.popular_n(5)
+    @main = Story.main
+   
   end
 
   def show
     @story = Story.find(params[:id])
-    
+    @populars = Story.popular_n(5)
   end
 
   def new
@@ -19,18 +21,18 @@ class StoriesController < ApplicationController
     respond_with @story
   end
 
-  def edit
-    @story = Story.find(params[:id])
-  end
+  # def edit
+  #   @story = Story.find(params[:id])
+  # end
   
   def create
     story = params[:story]
+    binding.pry
     subject = Subject.find_or_create_by_title(story[:subject_title])
     story.delete(:subject_title)
     @story = Story.new(story)
     @story.subject_id = subject.id
     if @story.save
-      binding.pry
       respond_with @story
     else
       render action: "new"

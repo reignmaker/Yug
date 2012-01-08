@@ -17,6 +17,7 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(params[:image])
+    binding.pry
     if @image.save
       render :json => [@image.to_jq_upload].to_json
     else
