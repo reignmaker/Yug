@@ -805,18 +805,6 @@ input {
     -webkit-box-shadow: 2px 2px 0 0 #CCCCCC;
 }
 
-not all and (-webkit-min-device-pixel-ratio:0) {
-  .avatar img {
-    width: 98%;
-}
-}
-@-moz-document url-prefix() {
-  .avatar img {
-    width: 98%;
-}
-}
-
-
 .comment div {
     float: left;
     width: 87%;
