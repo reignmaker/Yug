@@ -1,0 +1,22 @@
+<%= content_for :aside do%>
+  <article class="reklama">
+    <p>реклама?</p>
+  </article>
+
+  <article class="suzhets">
+    <h1>Популярные сюжеты</h1>
+    <hr />
+    <%= render "subjects/popular"%>
+  </article>
+  <article class="popular">
+    <h1>Самое популярное</h1>
+  <%= render "stories/popular", :populars => populars%>
+  </article>
+  <article class="social">
+    <a href="#"><img src=<%="#{root_url}assets/facebook.png" %> alt="" />Facebook</a>
+    <a href="#"><img src=<%= "#{root_url}assets/twitter.png" %> alt="" />Twitter</a>
+    <a href="#"><img src=<%= "#{root_url}assets/lj.png" %> alt="" />ЖЖ</a>
+    <a href="#"><img src=<%= "#{root_url}assets/vkontakte.png" %> alt="" />Вконтакте</a>
+    <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" />Google+</a>     
+  </article>
+<% end -%>

@@ -1,0 +1,16 @@
+<%= semantic_form_for [:admin, @story] do |f|%>
+  <%= f.inputs do %>
+  <% f.object.build_subject %>
+  <%= f.input :subject_title, :as => :autocomplete, :url => "/subjects/autocomplete_subject_title" %>
+  <%= f.input :title %>
+  <% f.inputs "Images" do %>
+    
+  <% end -%>
+  <%= f.input :teaser %>
+  <%= f.input :content %>
+  <%= f.input :status, :collection => Story.status_collection, :as => :radio %>
+  <%= f.input :is_main, :as => :radio %>
+  <%= f.input :published_at %>
+<% end -%>
+<%= f.buttons %>
+<% end -%>

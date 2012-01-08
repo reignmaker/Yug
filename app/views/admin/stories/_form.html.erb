@@ -1,0 +1,29 @@
+<%= semantic_form_for [:admin, @story] do |f|%>
+  <%= f.inputs do %>
+  <% f.object.build_subject %>
+  <%= f.input :subject_title, :as => :autocomplete, :url => "/subjects/autocomplete_subject_title" %>
+  <%= f.input :title %>
+ 
+  <%= f.inputs "Images" do%>
+    <li>
+      <label for="image-title">Image title: </label>
+      <input type="text" name="image-title">
+    </li>
+    <li>
+      <label for="image-file">Image file: </label>
+      <input type="file" name="image-file">
+    </li>
+    <li><a href="#" class="button">Add image</a></li>
+    <div id="images">
+      
+    </div>
+  <% end -%>
+
+  <%= f.input :teaser %>
+  <%= f.input :content %>
+  <%= f.input :status, :collection => Story.status_collection, :as => :radio %>
+  <%= f.input :is_main, :as => :radio %>
+  <%= f.input :published_at %>
+<% end -%>
+<%= f.buttons %>
+<% end -%>

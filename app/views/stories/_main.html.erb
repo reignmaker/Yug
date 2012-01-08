@@ -1,0 +1,15 @@
+<h1><%= main.subject_title %></h1>
+<div class="hot-news">
+<p class="date"><%= Russian::strftime(main.published_at, :long)%></p>
+<%= link_to main.title, main, :class => "ah1" %>
+
+<p class="announce"><%= main.teaser %></p>
+<article class="counters">
+  <a href="#" class="classes"></a>
+  <p class="green">134</p>
+  <a href="#" class="discuss"></a>
+  <p>34</p>
+  <a href="#" class="prosmotrov"></a>
+  <p><%= main.impressions_count %></p>
+</article>
+</div>
