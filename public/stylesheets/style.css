@@ -12,7 +12,7 @@ header, nav, section, article, aside, footer {
 body {
 	font: 12px 'Ubuntu Condensed', Arial, Tahoma, Verdana, sans-serif;
 	width: 100%;
-    background: url(images/bodybg.jpg) repeat-x scroll 0 0 #F5F6F7;
+    background: url(/images/bodybg.jpg) repeat-x scroll 0 0 #F5F6F7;
     height: 100%;
 }
 a {
@@ -247,14 +247,22 @@ input {
 }
 
 .counters .classes {
-
+    background: url("/images/classes.png") no-repeat scroll center top transparent;
+    height: 20px;
+    width: 18px;
 }
 .counters .discuss {
+    background: url("/images/discuss.png") no-repeat scroll center top transparent;
+    height: 20px;
     margin-left: 26px;
+    width: 20px;
 }
 .counters .prosmotrov {
+    background: url("/images/prosmotrov.png") no-repeat scroll center top transparent;
+    height: 12px;
     margin-left: 25px;
     margin-top: 5px;
+    width: 20px;
 }
 
 .announce {
@@ -366,26 +374,45 @@ input {
 }
 
 .newscounters .newsprosmotrov {
+    background: url("/images/prosmotrov.png") no-repeat scroll center center transparent;
     float: left;
     font-size: 14px;
     font-weight: normal;
+    height: 12px;
     line-height: 17px;
     margin: 2px 4px 13px 0;
     padding: 0;
+    width: 20px;
 }
 .newscounters .newsdiscuss {
+    background: url("/images/discuss.png") no-repeat scroll center top transparent;
     clear: both;
     float: left;
+    height: 20px;
     line-height: 20px;
     margin: -1px 4px 13px 0;
     padding: 0;
+    width: 20px;
 }
 .newscounters .newsclasses {
+    background: url("/images/classes.png") no-repeat scroll center top transparent;
     clear: both;
     float: left;
+    height: 20px;
     line-height: 26px;
     margin: -4px 6px 2px 0;
     padding: 0;
+    width: 18px;
+}
+.newscounters .newsnoclasses {
+    background: url("/images/noclasses.png") no-repeat scroll center top transparent;
+    clear: both;
+    float: left;
+    height: 20px;
+    line-height: 26px;
+    margin: 4px 6px 2px 0;
+    padding: 0;
+    width: 18px;
 }
 
 .newscounters p {
@@ -534,8 +561,12 @@ input {
 }
 
 .popularprosmotrov {
+    background: url("/images/glazik.png") no-repeat scroll center 3px transparent;
     float: left;
+    height: 9px;
     margin: 0 4px 15px 0 !important;
+    padding-bottom: 3px;
+    width: 15px;
 }
 
 .social {
@@ -564,7 +595,7 @@ input {
 /* Footer
 -----------------------------------------------------------------------------*/
 #footer {
-    background: url("images/footerpoloska.png") repeat-x scroll left top transparent;
+    background: url("/images/footerpoloska.png") repeat-x scroll left top transparent;
     height: 120px;
     margin: -120px auto 0;
     padding: 0 2%;
@@ -774,18 +805,6 @@ input {
     -webkit-box-shadow: 2px 2px 0 0 #CCCCCC;
 }
 
-not all and (-webkit-min-device-pixel-ratio:0) {
-  .avatar img {
-    width: 98%;
-}
-}
-@-moz-document url-prefix() {
-  .avatar img {
-    width: 98%;
-}
-}
-
-
 .comment div {
     float: left;
     width: 87%;
@@ -893,7 +912,7 @@ not all and (-webkit-min-device-pixel-ratio:0) {
 }
 
 .prev h2 {
-    background: url("images/h2bg.png") no-repeat scroll left center transparent;
+    background: url("/images/h2bg.png") no-repeat scroll left center transparent;
     color: #333333;
     font-family: trebuchet MS;
     font-size: 12px;
@@ -914,7 +933,7 @@ not all and (-webkit-min-device-pixel-ratio:0) {
 }
 
 .next h2 {
-    background: url("images/h2bgr.png") no-repeat scroll right center transparent;
+    background: url("/images/h2bgr.png") no-repeat scroll right center transparent;
     color: #333333;
     font-family: trebuchet MS;
     font-size: 12px;
@@ -929,7 +948,7 @@ not all and (-webkit-min-device-pixel-ratio:0) {
 }
 
 .rubrik {
-    background: url("images/butbgf.png") repeat-x scroll left bottom transparent;
+    background: url("/images/butbgf.png") repeat-x scroll left bottom transparent;
     color: #333333;
     display: block;
     font-size: 21px;
@@ -1117,7 +1136,7 @@ not all and (-webkit-min-device-pixel-ratio:0) {
 }
 
 .newsaddbut {
-    background: url("images/addnewsbut.png") no-repeat scroll center center transparent;
+    background: url("/images/addnewsbut.png") no-repeat scroll center center transparent;
     border: medium none;
     display: block;
     height: 40px;
