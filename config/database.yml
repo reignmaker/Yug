@@ -24,6 +24,6 @@ production:
   reconnect: false
   database: yug
   pool: 15
-  username: root
-  password: '123'
+  username: rails
+  password: 'rails'
   host: localhost
