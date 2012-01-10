@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(:version => 20111224155743) do
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
     t.integer  "story_id"
-    t.text     "text",       :limit => 500
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -89,21 +89,21 @@ ActiveRecord::Schema.define(:version => 20111224155743) do
 
   create_table "stories", :force => true do |t|
     t.string   "title"
-    t.text     "teaser",            :limit => 400
+    t.text     "teaser"
     t.text     "content"
-    t.string   "status",            :limit => 20,  :default => "moderating"
+    t.string   "status",            :limit => 20, :default => "moderating"
     t.integer  "user_id"
     t.integer  "subject_id"
-    t.datetime "published_at",                     :default => '2011-12-25 11:46:36'
+    t.datetime "published_at",                    :default => '2012-01-09 14:37:54'
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "is_main",                          :default => false
+    t.boolean  "is_main",                         :default => false
     t.integer  "impressions_count"
   end
 
   create_table "subjects", :force => true do |t|
     t.string   "title"
-    t.text     "description", :limit => 300
+    t.text     "description"
     t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"

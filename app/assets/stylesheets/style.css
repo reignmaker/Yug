@@ -12,7 +12,7 @@ header, nav, section, article, aside, footer {
 body {
 	font: 12px 'Ubuntu Condensed', Arial, Tahoma, Verdana, sans-serif;
 	width: 100%;
-    background: url(/images/bodybg.jpg) repeat-x scroll 0 0 #F5F6F7;
+    background: url(/assets/bodybg.jpg) repeat-x scroll 0 0 #F5F6F7;
     height: 100%;
 }
 a {
@@ -247,18 +247,18 @@ input {
 }
 
 .counters .classes {
-    background: url("/images/classes.png") no-repeat scroll center top transparent;
+    background: url("/assets/classes.png") no-repeat scroll center top transparent;
     height: 20px;
     width: 18px;
 }
 .counters .discuss {
-    background: url("/images/discuss.png") no-repeat scroll center top transparent;
+    background: url("/assets/discuss.png") no-repeat scroll center top transparent;
     height: 20px;
     margin-left: 26px;
     width: 20px;
 }
 .counters .prosmotrov {
-    background: url("/images/prosmotrov.png") no-repeat scroll center top transparent;
+    background: url("/assets/prosmotrov.png") no-repeat scroll center top transparent;
     height: 12px;
     margin-left: 25px;
     margin-top: 5px;
@@ -374,7 +374,7 @@ input {
 }
 
 .newscounters .newsprosmotrov {
-    background: url("/images/prosmotrov.png") no-repeat scroll center center transparent;
+    background: url("/assets/prosmotrov.png") no-repeat scroll center center transparent;
     float: left;
     font-size: 14px;
     font-weight: normal;
@@ -385,7 +385,7 @@ input {
     width: 20px;
 }
 .newscounters .newsdiscuss {
-    background: url("/images/discuss.png") no-repeat scroll center top transparent;
+    background: url("/assets/discuss.png") no-repeat scroll center top transparent;
     clear: both;
     float: left;
     height: 20px;
@@ -395,7 +395,7 @@ input {
     width: 20px;
 }
 .newscounters .newsclasses {
-    background: url("/images/classes.png") no-repeat scroll center top transparent;
+    background: url("/assets/classes.png") no-repeat scroll center top transparent;
     clear: both;
     float: left;
     height: 20px;
@@ -405,7 +405,7 @@ input {
     width: 18px;
 }
 .newscounters .newsnoclasses {
-    background: url("/images/noclasses.png") no-repeat scroll center top transparent;
+    background: url("/assets/noclasses.png") no-repeat scroll center top transparent;
     clear: both;
     float: left;
     height: 20px;
@@ -561,7 +561,7 @@ input {
 }
 
 .popularprosmotrov {
-    background: url("/images/glazik.png") no-repeat scroll center 3px transparent;
+    background: url("/assets/glazik.png") no-repeat scroll center 3px transparent;
     float: left;
     height: 9px;
     margin: 0 4px 15px 0 !important;
@@ -595,7 +595,7 @@ input {
 /* Footer
 -----------------------------------------------------------------------------*/
 #footer {
-    background: url("/images/footerpoloska.png") repeat-x scroll left top transparent;
+    background: url("/assets/footerpoloska.png") repeat-x scroll left top transparent;
     height: 120px;
     margin: -120px auto 0;
     padding: 0 2%;
@@ -912,7 +912,7 @@ input {
 }
 
 .prev h2 {
-    background: url("/images/h2bg.png") no-repeat scroll left center transparent;
+    background: url("/assets/h2bg.png") no-repeat scroll left center transparent;
     color: #333333;
     font-family: trebuchet MS;
     font-size: 12px;
@@ -933,7 +933,7 @@ input {
 }
 
 .next h2 {
-    background: url("/images/h2bgr.png") no-repeat scroll right center transparent;
+    background: url("/assets/h2bgr.png") no-repeat scroll right center transparent;
     color: #333333;
     font-family: trebuchet MS;
     font-size: 12px;
@@ -948,7 +948,7 @@ input {
 }
 
 .rubrik {
-    background: url("/images/butbgf.png") repeat-x scroll left bottom transparent;
+    background: url("/assets/butbgf.png") repeat-x scroll left bottom transparent;
     color: #333333;
     display: block;
     font-size: 21px;
@@ -1136,7 +1136,7 @@ input {
 }
 
 .newsaddbut {
-    background: url("/images/addnewsbut.png") no-repeat scroll center center transparent;
+    background: url("/assets/addnewsbut.png") no-repeat scroll center center transparent;
     border: medium none;
     display: block;
     height: 40px;
