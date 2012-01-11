@@ -79,9 +79,9 @@ end
     f.inputs do
       if f.object.new_record? then
         f.object.build_subject
-        f.inputs :subject_id
+        f.input :subject_id
       else
-        f.inputs :subject_id
+        f.input :subject_id
       end
       f.input :subject_id, :collection =>Subject.all, :as => :select #:as => :autocomplete, :url => "/admin/subjects/autocomplete_subject_title"
       f.input :title
