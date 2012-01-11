@@ -76,14 +76,13 @@ end
   end
 
   form do |f|
-    # if f.object.new_record? then
-    #   f.object.build_subject
-    #   f.inputs :subject_id
-    # else
-    #   f.inputs :subject_id
-    # end
     f.inputs do
-      f.object.build_subject
+      if f.object.new_record? then
+        f.object.build_subject
+        f.inputs :subject_id
+      else
+        f.inputs :subject_id
+      end
       f.input :subject_id, :collection =>Subject.all, :as => :select #:as => :autocomplete, :url => "/admin/subjects/autocomplete_subject_title"
       f.input :title
       f.input :teaser
