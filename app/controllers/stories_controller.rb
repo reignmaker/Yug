@@ -22,9 +22,9 @@ class StoriesController < ApplicationController
     respond_with @story
   end
 
-  # def edit
-  #   @story = Story.find(params[:id])
-  # end
+  def edit
+    @story = Story.find(params[:id])
+  end
   
   def create
     story = params[:story]
