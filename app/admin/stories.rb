@@ -81,7 +81,7 @@ end
         f.object.build_subject
         f.input :subject_id, :collection =>Subject.all, :as => :select
       else
-        f.input :subject_id, :collection =>Subject.find(:subject_id), :as => :select
+        f.input :subject_id, :collection =>Subject.find(params[:id]), :as => :select
       end
       f.input :subject_id, :collection =>Subject.all, :as => :select #:as => :autocomplete, :url => "/admin/subjects/autocomplete_subject_title"
       f.input :title
