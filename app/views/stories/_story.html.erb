@@ -1,21 +1,21 @@
 <article class="newsblock">
   <%= link_to story.subject_title, story.subject, :class =>'news_zagolovok'%>
-  <p class="info">
+  <span class="info">
   <%=story.subject.published_stories_count%> <%= Russian::p(story.subject.published_stories_count, "новость","новости","новостей")%>
-  </p>
+  </span>
   <div class="news-block">
-  <p class="newsdate"><%= Russian::strftime(story.published_at, :long)%></p>
+  <span class="newsdate"><%= Russian::strftime(story.published_at, :long)%></span>
       <a href="#"><%= link_to story.title, story %></a>
     <div class="news-content">
-      <p><%= story.teaser.html_safe %></p>
+      <%= story.teaser.html_safe %>
     </div>
     <article class="newscounters">
         <a href="#" class="newsprosmotrov"></a>
-        <p><%= story.impressionist_count %></p>
+        <span><%= story.impressionist_count %></span>
         <a href="#" class="newsdiscuss"></a>
-        <p>34</p>
+        <span>34</span>
         <a href="#" class="newsclasses"></a>
-        <p class="green">134</p>              
+        <span class="green">134</span>              
       </article>
   </div>
 </article>

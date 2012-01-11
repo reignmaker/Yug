@@ -5,6 +5,7 @@ class Story < ActiveRecord::Base
   STATUS_PUBLISHED = 'published'
   STATUS_APPROVED = 'approved'
   STATUS_UNAPPROVED = 'unapproved'
+  STATUSES = {draft:'draft', moderating:'moderating', deleted:'deleted', approved:'approved', published:'published', unapproved:'unapproved'}
   
   is_impressionable :counter_cache => true
 

@@ -214,7 +214,7 @@ input {
     padding: 0 1%;
 }
 
-.contimg {
+.hot-news img {
    margin: 9px 1%;
    width:98%;
 }
@@ -233,7 +233,7 @@ input {
 	float: left;
 }
 
-.counters p {
+.counters span {
     color: #666666;
     float: left;
     font-family: Trebuchet MS;
@@ -265,7 +265,7 @@ input {
     width: 20px;
 }
 
-.announce {
+.hot-news p {
     clear: both;
     color: #333333;
     display: block;
@@ -344,6 +344,8 @@ input {
     font-family: Trebuchet MS;
     line-height: 17px;
     margin: 7px 0 0 9px;
+    float: left;
+    width:100%;
 }
 
 .newsdate a {
@@ -415,7 +417,7 @@ input {
     width: 18px;
 }
 
-.newscounters p {
+.newscounters span {
     color: #666666;
     float: left;
     font-family: Trebuchet MS;

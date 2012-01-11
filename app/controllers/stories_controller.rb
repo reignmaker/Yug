@@ -1,5 +1,4 @@
 class StoriesController < ApplicationController
-
   impressionist :actions => [:show], :unique => [:controller_name, :action_name, :session_hash, :impressionable_id]
   
   respond_to :html, :json
@@ -8,12 +7,14 @@ class StoriesController < ApplicationController
     @stories = Story.last_n(10)
     @populars = Story.popular_n(5)
     @main = Story.main
+    @popular_subjects = Subject.popular
    
   end
 
   def show
     @story = Story.find(params[:id])
     @populars = Story.popular_n(5)
+    @popular_subjects = Subject.popular
   end
 
   def new

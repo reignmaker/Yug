@@ -4,6 +4,7 @@
   <%= link_to @story.subject_title, @story.subject, :class => 'news_zagolovok'%>
     <p class="newsdate"><%= Russian::strftime(@story.published_at, :long)%></p>
     <h1><%= @story.title%></h1>
+    <%= @story.teaser.html_safe%>
     <p><%= @story.content.html_safe%></p>
   </article>
   <article class="rating">
@@ -31,5 +32,5 @@
     </article>
   </article>
 </section>
-<%= render "shared/sidebar", :populars => @populars %>
+<%= render "shared/sidebar", :populars => @populars, :subjects => @popular_subjects %>
 

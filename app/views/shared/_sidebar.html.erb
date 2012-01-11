@@ -6,7 +6,7 @@
   <article class="suzhets">
     <h1>Популярные сюжеты</h1>
     <hr />
-    <%= render "subjects/popular"%>
+    <%= render "subjects/popular", :subjects => subjects%>
   </article>
   <article class="popular">
     <h1>Самое популярное</h1>
@@ -14,9 +14,9 @@
   </article>
   <article class="social">
     <a href="#"><%= image_tag "facebook.png"%>Facebook</a>
-    <a href="#"><img src=<%= "#{root_url}assets/twitter.png" %> alt="" />Twitter</a>
-    <a href="#"><img src=<%= "#{root_url}assets/lj.png" %> alt="" />ЖЖ</a>
-    <a href="#"><img src=<%= "#{root_url}assets/vkontakte.png" %> alt="" />Вконтакте</a>
-    <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" />Google+</a>     
+    <a href="#"><%= image_tag "twitter.png"%>Twitter</a>
+    <a href="#"><%= image_tag "lj.png"%>ЖЖ</a>
+    <a href="#"><%= image_tag "vkontakte.png"%>Вконтакте</a>
+    <a href="#"><%= image_tag "googleplus.png"%>Google+</a>     
   </article>
 <% end -%>

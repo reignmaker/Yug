@@ -1,15 +1,15 @@
 <h1><%= main.subject_title %></h1>
 <div class="hot-news">
-<p class="date"><%= Russian::strftime(main.published_at, :long)%></p>
+<span class="date"><%= Russian::strftime(main.published_at, :long)%></span>
 <%= link_to main.title, main, :class => "ah1" %>
 
-<p class="announce"><%= main.teaser %></p>
+<div><%= main.teaser.html_safe %></div>
 <article class="counters">
   <a href="#" class="classes"></a>
-  <p class="green">134</p>
+  <span class="green">134</span>
   <a href="#" class="discuss"></a>
-  <p>34</p>
+  <span>34</span>
   <a href="#" class="prosmotrov"></a>
-  <p><%= main.impressions_count %></p>
+  <span><%= main.impressions_count %></span>
 </article>
 </div>
