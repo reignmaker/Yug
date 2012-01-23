@@ -4,8 +4,7 @@
   <%= link_to @story.subject_title, @story.subject, :class => 'news_zagolovok'%>
     <p class="newsdate"><%= Russian::strftime(@story.published_at, :long)%></p>
     <h1><%= @story.title%></h1>
-    <%= @story.teaser.html_safe%>
-    <p><%= @story.content.html_safe%></p>
+    <%= @story.content.html_safe%>
   </article>
   <article class="rating">
     <p class="rate">-36</p>
@@ -19,17 +18,6 @@
         <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" /></a>
       <img src=<%="#{root_url}assets/googlecount.png" %> alt="" />
     </p>
-  </article>
-  <article class="newsnav">
-    <article class="prev">
-      <h2>Предыдущая новость</h2>
-      <a href="#">Роскомнадзор потребовал от телеканала «Дождь» записи эфира за 5 и 6 декабря</a>
-    </article>
-    <a href="#" class="rubrik">Интересные истории</a>
-    <article class="next">
-      <h2>Следующая новость</h2>
-      <a href="#">Сторонники Джиоевой возобновляют переговоры с представителем Кремля</a>
-    </article>
   </article>
 </section>
 <%= render "shared/sidebar", :populars => @populars, :subjects => @popular_subjects %>

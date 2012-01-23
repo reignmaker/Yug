@@ -17,10 +17,15 @@ class Story < ActiveRecord::Base
   delegate :title, :description, :to => :subject, :prefix => true
 
 # get all published stories  
-  scope :published, where(:status => Story::STATUS_PUBLISHED).where("published_at <=(?)",Time.now)
+  #scope :published, where(:status => Story::STATUS_PUBLISHED).where("published_at <=(?)",Time.now)
+  def self.published
+    uncached do 
+      where(:status => Story::STATUS_PUBLISHED).where("published_at <=(?)",Time.now)
+    end    
+  end
 
 # get last N stories  
-  scope :last_n, lambda {|n| published.limit(n)} 
+  scope :last_n, lambda {|n| published.limit(n).order('published_at DESC')} 
 
 # get N popular stories 
   scope :popular_n, lambda {|n|published.order('impressions_count DESC').limit(n)}

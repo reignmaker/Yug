@@ -344,8 +344,7 @@ input {
     font-family: Trebuchet MS;
     line-height: 17px;
     margin: 7px 0 0 9px;
-    float: left;
-    width:100%;
+    display: block;
 }
 
 .newsdate a {

@@ -1,4 +1,4 @@
-<%= content_for(:title) {"Сюжет: " + @subject.title}%>
+<%= content_for(:title) {"Сюжет: " + @subject.title} %>
 <section class="suget">
   <div>
     <h1><%= @subject.title %></h1>
@@ -12,17 +12,17 @@
       </p>
       <p class="sugetp"><%= @subject.description if true %></p>
   </div>
-  <h2 class="newscounter"><%=@subject.published_stories_count%> <%= Russian::p(@subject.published_stories_count, "новость","новости","новостей")%></h2>
+  <h2 class="newscounter"><%=@subject.published_stories_count%> <%= Russian::p(@subject.published_stories_count, "новость","новости","новостей") %></h2>
   <% @stories.each do |s|%>
     <div class="suget-block">
-        <p class="newsdate"><%= Russian::strftime(s.published_at, :long)%></p>
-        <a href="#"><%= link_to s.title, s%></a>
+        <p class="newsdate"><%= Russian::strftime(s.published_at, :long) %></p>
+        <a href="#"><%= link_to s.title, s %></a>
         <div class="suget-content">
-          <p><%=s.teaser%></p>
+          <%=s.teaser.html_safe %>
         </div>
           <article class="newscounters">
             <a href="#" class="newsprosmotrov"></a>
-            <p><%= s.impressionist_count%></p>
+            <p><%= s.impressionist_count %></p>
             <a href="#" class="newsdiscuss"></a>
             <p>34</p>           
           </article>
