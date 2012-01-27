@@ -3,12 +3,12 @@
   <div>
     <h1><%= @subject.title %></h1>
     <p class="share_suget"><span>Поделиться: </span>
-        <a href="#"><img src=<%="#{root_url}assets/facebook.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/twitter.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/lj.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/vkontakte.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" /></a>
-        <img src=<%="#{root_url}assets/googlecount.png" %> alt="" />
+        <a href="http://www.facebook.com/sharer.php?u=<%=request.url%>"><img src=<%="#{root_url}assets/facebook.png" %> alt="" /></a>
+        <a href="http://twitter.com/intent/tweet?text=<%=u(request.url + @subject.title + '#unasnayuge')%>"><img src=<%= "#{root_url}assets/twitter.png" %> alt="" /></a>
+        <a href="http://vkontakte.ru/share.php?url=<%=request.url%>"><img src=<%= "#{root_url}assets/vkontakte.png" %> alt="" /></a>
+<!--         <a href="#"><img src=<%= "#{root_url}assets/lj.png" %> alt="" /></a> -->
+<!--         <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" /></a>
+        <img src=<%="#{root_url}assets/googlecount.png" %> alt="" /> -->
       </p>
       <p class="sugetp"><%= @subject.description if true %></p>
   </div>
