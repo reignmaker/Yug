@@ -116,7 +116,8 @@ input {
     font-size: 47px;
     letter-spacing: -0.02em;
     line-height: 56px;
-    margin: 23px 0 0 12px;
+    margin: 56px 0 0 12px;
+    /*margin: 23px 0 0 12px;*/
     text-decoration: underline;
     text-shadow: 2px 2px 0 #FFFFFF;
 }
@@ -125,7 +126,8 @@ input {
 .menu {
     float: left;
     letter-spacing: -0.06em;
-    margin: 32px 0 0 36px;
+    margin: 65px 0 0 36px;
+    /*margin: 32px 0 0 36px;*/
 }
 
 .menu ul {
@@ -555,14 +557,16 @@ input {
 }
 
 
-.popular p {
+.popular span {
     color: #999999;
     font-family: Trebuchet MS;
     font-size: 11px;
+    padding-left:22px;
+    width:100%;
 }
 
 .popularprosmotrov {
-    background: url("/assets/glazik.png") no-repeat scroll center 3px transparent;
+    background: url("/assets/glazik.png") no-repeat 3px transparent;
     float: left;
     height: 9px;
     margin: 0 4px 15px 0 !important;
@@ -733,7 +737,7 @@ input {
 
 .share {
     float: left;
-    margin: 12px 0 0;
+    margin: 12px 5px 0;
 }
 
 .share span {

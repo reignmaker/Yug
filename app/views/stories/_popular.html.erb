@@ -1,7 +1,6 @@
 <% populars.each do |popular|%>
 <div>
-  <%= link_to popular.title, popular %></a>
-  <a href="#" class="popularprosmotrov"></a>
-  <p><%= popular.impressions_count %></p>
+  <%= link_to popular.title, popular %>
+  <span class="popularprosmotrov" title="Просмотров"><%= popular.impressions_count %></span>
 </div>
 <% end -%>        

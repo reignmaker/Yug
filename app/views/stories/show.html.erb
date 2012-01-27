@@ -8,15 +8,15 @@
   </article>
   <article class="rating">
     <!-- <p class="rate">-36</p> -->
-    <a href="#" class="plus"><img alt="" src=<%= "#{root_url}assets/plus.png" %>></a>
-    <a href="#" class="minus"><img alt="" src=<%= "#{root_url}assets/minus.png" %>></a>
+<!--     <a href="#" class="plus"><img alt="" src=<%= "#{root_url}assets/plus.png" %>></a>
+    <a href="#" class="minus"><img alt="" src=<%= "#{root_url}assets/minus.png" %>></a> -->
     <p class="share"><span>Поделиться: </span>
-        <a href="#"><img src=<%="#{root_url}assets/facebook.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/twitter.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/lj.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/vkontakte.png" %> alt="" /></a>
-        <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" /></a>
-      <img src=<%="#{root_url}assets/googlecount.png" %> alt="" />
+        <a href="http://www.facebook.com/sharer.php?u=<%=request.url%>"><img src=<%="#{root_url}assets/facebook.png" %> alt="" /></a>
+        <a href="http://twitter.com/intent/tweet?text=<%=u(request.url + @story.title + '#unasnayuge')%>"><img src=<%= "#{root_url}assets/twitter.png" %> alt="" /></a>
+        <!-- <a href="#"><img src=<%= "#{root_url}assets/lj.png" %> alt="" /></a> -->
+        <a href="http://vkontakte.ru/share.php?url=<%=request.url%>"><img src=<%= "#{root_url}assets/vkontakte.png" %> alt="" /></a>
+        <!-- <a href="#"><img src=<%= "#{root_url}assets/googleplus.png" %> alt="" /></a>
+        <img src=<%="#{root_url}assets/googlecount.png" %> alt="" /> -->
     </p>
   </article>
 </section>
