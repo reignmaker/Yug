@@ -64,15 +64,15 @@ end
 
   show :title => :title do
     panel "Story" do
-    attributes_table_for story do
-      #binding.pry
-      row ("Subject") {link_to story.subject_title, admin_subject_path(story.subject_id)}
-      row ("Title") {story.title}
-      row ("Teaser") {story.teaser.html_safe}
-      row ("Content") {story.content.html_safe}
+      attributes_table_for story do
+        #binding.pry
+        row ("Subject") {link_to story.subject_title, admin_subject_path(story.subject_id)}
+        row ("Title") {story.title}
+        row ("Teaser") {story.teaser.html_safe}
+        row ("Content") {story.content.html_safe}
 
+      end
     end
-  end
   end
 
   form do |f|

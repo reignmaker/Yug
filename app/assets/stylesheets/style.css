@@ -708,6 +708,14 @@ input {
     margin: 0;
 	color:#145FBF;
 }
+.news_sltd i{
+    color: #666666;
+    display: block;
+    font-family: Trebuchet MS;
+    font-size: 12px;
+    margin: 0 0 10px;
+    padding: 0 22px 5px;
+}
 
 
 .rating {
